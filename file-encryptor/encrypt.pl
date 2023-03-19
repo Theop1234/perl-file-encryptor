@@ -1,3 +1,8 @@
+#!/usr/bin/perl
+
+#this encrypts this file
+
+
 use strict;
 use warnings;
 use Crypt::CBC;
