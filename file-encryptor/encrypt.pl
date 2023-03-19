@@ -2,21 +2,17 @@ use strict;
 use warnings;
 use Crypt::CBC;
 
-# Get password from user
-print "Enter password: ";
+print "Enter password:\t";
 my $password = <STDIN>;
 chomp $password;
 
-# Initialize encryption cipher
 my $cipher = Crypt::CBC->new(
     -key    => $password,
     -cipher => 'Blowfish',
 );
 
-# Get list of files to encrypt
 my @files = grep { !/(^|\/)(encrypt|decrypt)\.pl$/ && !/\.enc$/ } glob("*");
 
-# Encrypt each file
 foreach my $file (@files) {
     # Read file contents
     open my $fh, '<', $file or die "Can't open $file: $!";
