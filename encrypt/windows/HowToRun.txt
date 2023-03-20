@@ -1,0 +1,17 @@
+to run this, 
+run the powershell script as admin
+open cmd as admin
+then run "cpan Crypt::CBC" in cmd,Type accurately
+if that doesn't work try "cpan Crypt::Mode::CBC"
+if that also doesn't work put the crypt-cbc-3.04-2 file in C:\Strawberry\cpan\build and try rebuilding
+Warning this process may take a while
+
+if none of these work search it up
+
+note:
+this MIGHT only work on windows 11
+
+
+
+
+
